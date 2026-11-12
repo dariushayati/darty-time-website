@@ -3,136 +3,299 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Darty Time — Darts night, upgraded</title>
-  <meta name="description" content="Nine darts game modes, automatic scoring, and a live second screen. Darty Time is now in beta on Android.">
-  <meta name="theme-color" content="#0b0d10">
+  <title>Darty Time — Party darts for 1–6 players</title>
+  <meta name="description" content="Nine darts game modes, Autodarts or touch scoring, and a live second screen. Darty Time runs the match on your device — no accounts, no cloud, no ads. Join the Android beta.">
+  <meta name="theme-color" content="#05070D">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Darty Time — Darts night, upgraded">
-  <meta property="og:description" content="Nine game modes, automatic scoring, and a live second screen. Join the Android beta.">
-  <!-- <meta property="og:image" content="https://your-domain.com/og.png"> -->
-  <!-- <meta property="og:url" content="https://your-domain.com/"> -->
+  <meta property="og:title" content="Darty Time — Party darts for 1–6 players">
+  <meta property="og:description" content="Nine game modes, Autodarts or touch scoring, and a live second screen. Join the Android beta.">
+  <meta property="og:image" content="https://dariushayati.github.io/darty-time-website/assets/feature-graphic.png">
+  <meta property="og:url" content="https://dariushayati.github.io/darty-time-website/">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#signup">Skip to signup</a>
 
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="wrap header-inner">
       <a class="brand" href="/" aria-label="Darty Time home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name">Darty Time</span>
+        <img src="assets/icon.png" alt="" width="32" height="32">
+        <span>Darty Time</span>
       </a>
-      <span class="badge">Android beta</span>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#games">Games</a>
+        <a href="#second-screen">Second screen</a>
+        <a href="#beta">Beta</a>
+      </nav>
+      <a class="btn btn-sm" href="#signup">Join beta</a>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Now in beta</p>
-          <h1>Darts night,<br><span class="accent">upgraded.</span></h1>
-          <p class="lede">
-            Nine game modes — from Cricket and X01 to alien invasions and a board
-            made of lava — with automatic scoring and a live second screen for the
-            spectators. Built for the pub, the garage, and the bragging rights.
-          </p>
+    <section class="hero" id="top">
+      <div class="wrap">
+        <img class="hero-logo" src="assets/logo.png" alt="Darty Time" width="1024" height="512">
+        <p class="eyebrow">Android beta · Local-first darts</p>
+        <h1>Party darts for<br>1–6 players</h1>
+        <p class="lede">
+          Nine game modes, Autodarts or touch scoring, and a live second screen.
+          Darty Time runs the whole match on your device — no accounts, no cloud,
+          no ads.
+        </p>
 
-          <form id="signup" class="signup-form" action="https://formspree.io/f/REPLACE_ME" method="POST" novalidate>
-            <label class="sr-only" for="email">Email address</label>
-            <div class="field-row">
-              <input id="email" type="email" name="email" autocomplete="email" inputmode="email"
-                     placeholder="you@example.com" required>
-              <button type="submit" class="btn">Join the beta</button>
-            </div>
-            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <input type="hidden" name="_subject" value="Darty Time beta signup">
-            <p class="form-note" id="form-status" role="status" aria-live="polite">
-              Free during beta. No spam — just your Play Store opt-in link.
-            </p>
-          </form>
-        </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <div class="dartboard">
-            <div class="dartboard-ring"></div>
+        <form id="signup" class="signup-form js-signup" action="https://formspree.io/f/REPLACE_ME" method="POST" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <div class="field-row">
+            <input id="email" type="email" name="email" autocomplete="email" inputmode="email"
+                   placeholder="you@example.com" required>
+            <button type="submit" class="btn">Join the beta</button>
           </div>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Darty Time beta signup">
+          <p class="form-note form-status" role="status" aria-live="polite">
+            We'll email your Google Play opt-in link. Android only.
+          </p>
+        </form>
+
+        <ul class="trust-row" aria-label="At a glance">
+          <li>1–6 players</li>
+          <li>Autodarts or touch</li>
+          <li>Second screen</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="shot-section">
+      <div class="wrap">
+        <figure class="screen">
+          <img src="assets/menu.png" alt="The Darty Time games menu, with Join a Game above a list of game modes including Shields and Invaders" width="1920" height="1080" fetchpriority="high">
+        </figure>
+        <p class="screen-caption">
+          <span class="label">The games tab</span>
+          Nine modes, one board. Pick a game and start throwing.
+        </p>
+      </div>
+    </section>
+
+    <section class="games" id="games">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Nine ways to play</p>
+          <h2>Pick a game. Any game.</h2>
+          <p>Every mode supports one to six players, configurable rules, and a full
+             post-match result screen.</p>
+        </header>
+
+        <div class="game-grid">
+          <article class="game-card" style="--accent:#00E676">
+            <span class="game-badge" aria-hidden="true">S</span>
+            <div>
+              <h3>Shields</h3>
+              <p>Claim sectors. Three shields lock them in. Opponents knock them off.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#B388FF">
+            <span class="game-badge" aria-hidden="true">I</span>
+            <div>
+              <h3>Invaders</h3>
+              <p>Three aliens on every number. Doubles and trebles hit harder.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#FF6D00">
+            <span class="game-badge" aria-hidden="true">L</span>
+            <div>
+              <h3>The Board Is Lava</h3>
+              <p>The board is lava. Throw darts and avoid the burn.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#FFEB00">
+            <span class="game-badge" aria-hidden="true">R</span>
+            <div>
+              <h3>Ring Run</h3>
+              <p>Four rounds. Shrink the ring. Finish on the bull.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#FFB300">
+            <span class="game-badge" aria-hidden="true">R</span>
+            <div>
+              <h3>Robin Hood</h3>
+              <p>Aim for the bull. Every ring closer to the centre scores more.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#C9873F">
+            <span class="game-badge" aria-hidden="true">W</span>
+            <div>
+              <h3>Whack a Mole</h3>
+              <p>A random list of numbers. Whack them in order — first to clear the list wins.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#29B6F6">
+            <span class="game-badge" aria-hidden="true">C</span>
+            <div>
+              <h3>Cricket</h3>
+              <p>Close 20 to 15 and the bull with three marks. Score on targets your rivals leave open.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#1E88E5">
+            <span class="game-badge" aria-hidden="true">X</span>
+            <div>
+              <h3>X01</h3>
+              <p>Race to zero. 501, 301 or 121 with custom in/out and leg rules.</p>
+            </div>
+          </article>
+          <article class="game-card" style="--accent:#E53935">
+            <span class="game-badge" aria-hidden="true">G</span>
+            <div>
+              <h3>Gunslinger</h3>
+              <p>Wait for the beeps, then hit the random number with all three darts before the clock drains your score.</p>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="split" id="second-screen">
+      <div class="wrap split-inner">
+        <div class="split-copy">
+          <p class="eyebrow">Second screen</p>
+          <h2>One game.<br>Every screen in the room.</h2>
+          <p>
+            Start a match on the host device and let everyone else follow along over
+            Wi-Fi. No sign-in, no pairing codes to fumble — just the game, live.
+          </p>
+          <ul class="check-list">
+            <li>Host approves every device before it connects</li>
+            <li>Read-only guest view for phones, tablets, and Android TV</li>
+            <li>Game state never leaves your local network</li>
+          </ul>
+        </div>
+        <figure class="screen screen-tilt">
+          <img src="assets/game.png" alt="A live game of The Board Is Lava mirrored to a second screen, showing player lives and the board" width="1920" height="1080" loading="lazy">
+        </figure>
       </div>
     </section>
 
     <section class="features">
-      <div class="container">
-        <h2>Less arguing. More darts.</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Nine ways to play</h3>
-            <p>Cricket, X01, Gunslinger, Shields, Invaders, Lava, Ring Run, Robin Hood, and Whack a Mole. One to six players, no accounts.</p>
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Built for the room</p>
+          <h2>Local-first by design.</h2>
+        </header>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+            <h3>No accounts, no cloud</h3>
+            <p>Players, rules, and match history stay on your device. There is no backend to sign into and no data to sync.</p>
           </article>
-          <article class="card">
-            <h3>Autodarts or manual</h3>
-            <p>Connect Autodarts for hands-free scoring on a real board, or tap the board yourself. Your call.</p>
+          <article class="feature-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+            <h3>Autodarts or touch</h3>
+            <p>Poll a local Autodarts board manager for automatic scoring, or tap the on-screen board with press-and-hold aim. Both are first-class.</p>
           </article>
-          <article class="card">
-            <h3>Live second screen</h3>
-            <p>Host on one phone and let everyone else follow the match live on theirs — with host approval per device.</p>
-          </article>
-          <article class="card">
-            <h3>Match history</h3>
-            <p>Every game is saved with final scores and results, so the rematch starts with receipts.</p>
+          <article class="feature-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+            <h3>Phone, tablet, TV</h3>
+            <p>Phones stay portrait, tablets rotate into a two-pane layout, and Android TV can follow a live game as a read-only guest.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="how">
-      <div class="container">
-        <h2>How the beta works</h2>
+    <section class="beta" id="beta">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">The beta</p>
+          <h2>Three steps to the oche.</h2>
+        </header>
         <ol class="steps">
           <li>
-            <span class="step-num">1</span>
-            <div>
-              <h3>Join the list</h3>
-              <p>Drop your email above. That's the only thing we need.</p>
-            </div>
+            <span class="step-num">01</span>
+            <h3>Join the list</h3>
+            <p>Drop your email above. That's the only thing we need.</p>
           </li>
           <li>
-            <span class="step-num">2</span>
-            <div>
-              <h3>Get your opt-in link</h3>
-              <p>We'll email you a Google Play link that unlocks the beta build.</p>
-            </div>
+            <span class="step-num">02</span>
+            <h3>Get your link</h3>
+            <p>We email a Google Play opt-in link that unlocks the beta build.</p>
           </li>
           <li>
-            <span class="step-num">3</span>
-            <div>
-              <h3>Play and tell us</h3>
-              <p>Use it on a real darts night and send us what's broken, missing, or great.</p>
-            </div>
+            <span class="step-num">03</span>
+            <h3>Play and tell us</h3>
+            <p>Use it on a real darts night and send us what's broken, missing, or great.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="cta">
-      <div class="container cta-inner">
-        <div>
-          <h2>Ready to throw?</h2>
-          <p>Beta spots are limited. Grab yours before your mates do.</p>
+    <section class="faq">
+      <div class="wrap faq-inner">
+        <header class="section-head">
+          <p class="eyebrow">Questions</p>
+          <h2>Before you throw.</h2>
+        </header>
+        <div class="faq-list">
+          <details>
+            <summary>What does the beta cost?</summary>
+            <p>Nothing to join. The build is delivered through Google Play's testing track, and you can leave it at any time.</p>
+          </details>
+          <details>
+            <summary>Do I need an Autodarts board?</summary>
+            <p>No. Autodarts and touch scoring are equal first-class paths, so a plain board and a phone are enough.</p>
+          </details>
+          <details>
+            <summary>Which devices are supported?</summary>
+            <p>Android phones in portrait, Android tablets, and Android TV or Google TV as an optional read-only second screen.</p>
+          </details>
+          <details>
+            <summary>Is my data uploaded?</summary>
+            <p>No. Players, settings, and match history stay on your device. Second-screen data stays on your local network. Read the <a href="privacy.html">privacy policy</a>.</p>
+          </details>
         </div>
-        <a class="btn" href="#signup">Join the beta</a>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-panel">
+        <img class="cta-logo" src="assets/logo.png" alt="Darty Time" width="1024" height="512" loading="lazy">
+        <h2>Be first to the oche.</h2>
+        <p>Beta spots are limited. Grab yours before your mates do.</p>
+        <form class="signup-form js-signup" action="https://formspree.io/f/REPLACE_ME" method="POST" novalidate>
+          <label class="sr-only" for="email-bottom">Email address</label>
+          <div class="field-row">
+            <input id="email-bottom" type="email" name="email" autocomplete="email" inputmode="email"
+                   placeholder="you@example.com" required>
+            <button type="submit" class="btn">Join the beta</button>
+          </div>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Darty Time beta signup">
+          <p class="form-note form-status" role="status" aria-live="polite">
+            We'll email your Google Play opt-in link. Android only.
+          </p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; <span id="year">2026</span> Darty Time</span>
-      <span class="dot" aria-hidden="true">·</span>
-      <a href="mailto:hello@example.com">hello@example.com</a>
+    <div class="wrap footer-inner">
+      <a class="brand brand-sm" href="#top" aria-label="Back to top">
+        <img src="assets/icon.png" alt="" width="24" height="24">
+        <span>Darty Time</span>
+      </a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:darius.hayati@gmail.com">Contact</a>
+        <a href="https://github.com/dariushayati/darty-time-website">GitHub</a>
+      </nav>
+      <span class="copyright">&copy; <span id="year">2026</span> Darty Time</span>
     </div>
   </footer>
 
