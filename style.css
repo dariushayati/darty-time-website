@@ -431,13 +431,22 @@ h3 { font-size: 1.05rem; letter-spacing: 0.01em; }
   content: "";
   position: absolute;
   left: 0;
-  top: 0.15em;
+  top: 0.18em;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   border: 1.5px solid var(--green);
-  background:
-    linear-gradient(45deg, transparent 45%, var(--green) 45% 55%, transparent 55%) 55% 60% / 9px 9px no-repeat;
+}
+.check-list li::after {
+  content: "";
+  position: absolute;
+  left: 5.5px;
+  top: calc(0.18em + 6px);
+  width: 7px;
+  height: 3.5px;
+  border-left: 1.6px solid var(--green);
+  border-bottom: 1.6px solid var(--green);
+  transform: rotate(-45deg);
 }
 
 /* ---------- Features ---------- */
